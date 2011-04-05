@@ -15,7 +15,7 @@ table#cadastro{
 	margin: 0 auto;
 }
 
-form#cadastro input, form#cadastro textarea {
+form#cadastro input#ititulo, form#cadastro textarea {
 	width: 100%;
 }
 
@@ -31,6 +31,11 @@ div#upload{
 	margin-bottom: 10px;
 }
 
-div#upload_anchor{
+div#upload_img{
+	width: 14%;
+	cursor: pointer;
+}
+
+div#remover{
 	cursor: pointer;
 }
