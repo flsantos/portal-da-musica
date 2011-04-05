@@ -2,8 +2,7 @@
 	include '../app/time/adodb-time.inc.php';
 		
 		function eventos(){
-			$conexao = mysql_connect('localhost', 'root', '');
-			$db = mysql_select_db('portal_musica', $conexao);
+			include_once 'bd/conexao.php';
 			$query = 'select A.*, DATE_FORMAT(A.data_inicio, "%a, %d %b %Y 00:00:00 GMT+0530 ") as inicio, DATE_FORMAT(A.data_termino, "%a, %d %b %Y 00:00:00 GMT+0530 ") as termino from artigo A join artigo_pertence_timeline T on A.id = T.artigo_id';
 			$resultado = mysql_query($query, $conexao);
 			while($row = mysql_fetch_array($resultado)){
@@ -17,7 +16,7 @@
 					$durationEvent = TRUE;
 				}
 				$add = explode('/', $_SERVER['PHP_SELF']);
-				$caminho = 'http://'.$_SERVER['HTTP_HOST'].'/'.$add[1].'/'.$add[2].'/'.'visualizar_artigo.php/?id='.$row['id'];
+				$caminho = 'http://'.$_SERVER['HTTP_HOST'].'/'.$add[1].'/'.$add[2].'/'.'visualizar_artigo.php?id='.$row['id'];
 				
 				 
 				$eventAtts[] = array(
