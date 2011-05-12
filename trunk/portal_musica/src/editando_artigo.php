@@ -3,6 +3,8 @@
 	if(!isset($_POST))
 		header('Location: cadastra_artigo.php');
 	if(isset($_POST['pertence'])){
+		$query = 'delete from artigo_pertence_timeline where artigo_id = "'.$_POST['id'].'"';
+		mysql_query($query, $conexao);
 		if($_POST['data_termino'])
 			$query = 'update artigo set usuario_id = "'.$_SESSION['id'].'", titulo = "'.mysql_real_escape_string($_POST['titulo'], $conexao).'", artigo = "'.mysql_escape_string($_POST['artigo']).'", data_inicio = "'.mysql_escape_string($_POST['data_inicio']).'", data_termino =  "'.mysql_escape_string($_POST['data_termino']).'" where id = "'.$_POST['id'].'"';
 		else{
