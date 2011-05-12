@@ -7,7 +7,7 @@
 		function(){
 			$('a').click(
 				function(){
-					id = $('#excluir').attr('caminho');
+					id = $(this).attr('caminho');
 					if($(this).attr('id') == 'excluir'){
 						$( "#exclusao" ).dialog({
 							resizable: false,

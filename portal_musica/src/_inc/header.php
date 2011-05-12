@@ -14,7 +14,10 @@
 		<link rel='stylesheet' href='../css/cadastro.css'>
 		<script type="text/javascript">
 			$('document').ready(function(){				
-				$('textarea').cleditor();
+				$('textarea').cleditor({
+					width: 644,
+					height:421
+				});
 			});
 		</script>
 	</head>

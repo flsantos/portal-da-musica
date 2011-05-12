@@ -16,7 +16,7 @@
 					$durationEvent = TRUE;
 				}
 				$add = explode('/', $_SERVER['PHP_SELF']);
-				$caminho = 'http://'.$_SERVER['HTTP_HOST'].'/'.$add[1].'/'.$add[2].'/'.'visualizar_artigo.php?id='.$row['id'];
+				$caminho = 'http://'.$_SERVER['HTTP_HOST'].'/'.$add[1].'/'.'visualizar_artigo.php?id='.$row['id'];
 				
 				 
 				$eventAtts[] = array(
