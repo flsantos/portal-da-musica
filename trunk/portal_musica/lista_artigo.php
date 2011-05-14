@@ -1,10 +1,7 @@
 <?php 
-	include_once 'bd/conexao.php';
-	include '_inc/inc_header.php';
+	include_once 'src/bd/conexao.php';
+	include 'main_header.php';
 ?>
-<script type="text/javascript">
-	$("#acesso").removeClass().addClass("current");
-</script>
 <script>
 	$('document').ready(
 		function(){
@@ -74,4 +71,4 @@
 		</table>
 		<a href="javascript:;" caminho='cadastra_artigo.php'>Novo Artigo</a>
 	</div>
-<?php include '_inc/inc_footer.php';?>
+<?php include 'main_footer.php';?>

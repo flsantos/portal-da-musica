@@ -1,4 +1,7 @@
-<?php include '_inc/header.php';?>
+<?php include '_inc/inc_header.php';?>
+<script type="text/javascript">
+	$("#acesso").removeClass().addClass("current");
+</script>
 	<script>
 		$('document').ready(
 			function(){
@@ -37,4 +40,4 @@
 		<input type='submit' value='Enviar' />
 		</form>
 	</div>
-<?php include '_inc/footer.php' ?>
+<?php include '_inc/inc_footer.php' ?>
