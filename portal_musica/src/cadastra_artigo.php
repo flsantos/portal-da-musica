@@ -1,9 +1,12 @@
 <?php 
 	include_once 'bd/conexao.php';
-	include '_inc/header.php'; 
+	include '_inc/inc_header.php'; 
 	if(!isset($_SESSION['id']))
 		header('Location: administrador.php');
 ?>
+	<script type="text/javascript">
+		$("#acesso").removeClass().addClass("current");
+	</script>
 	<script type='text/javascript'>
 		$('document').ready(function(){
 			$('input#ipertence').click(function(){
@@ -93,4 +96,4 @@
 		</form>
 	</div>
 	
-<?php include '_inc/footer.php';?>
+<?php include '_inc/inc_footer.php';?>

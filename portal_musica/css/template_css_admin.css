@@ -867,10 +867,9 @@ font-weight:bolder;
 
 #main {
 	float: left;
-	width: 590px;
-	margin: 0;
+	width: 100%;
 	/*padding: 0 0 0 5px; */	
-	text-align:justify;
+	text-align:center;
 }
 
 #main_full {

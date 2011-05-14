@@ -1,13 +1,13 @@
 @CHARSET "ISO-8859-1";
 div#login{
 	margin: 100px auto 0 auto;
-	width: 339px;
-	height: 96px;
+	/*width: 339px;*/
+	width: 736px;
+	height: 116px;
 	background: #f4f7d4;
 	border: 1px solid #ffc90c;
 }
 
 form#login{
-	margin: 0 auto;
-	width: 70%;
+	margin: 20px 270px 0;
 }
