@@ -92,7 +92,17 @@
 																					<span>página inicial</span> 
 																				</a>
 																			</li>
-																			<li id="182" class="item182">
+																			<li id="quem_somos" class="item183">
+																				<a href="index.php"> 
+																					<span>quem somos</span> 
+																				</a>
+																			</li>
+																			<li id="contato" class="item184">
+																				<a href="index.php"> 
+																					<span>contato</span> 
+																				</a>
+																			</li>
+																			<li id="acesso" class="item182">
 																				<a href="src/administrador.php" target='blank'>
 																							<span>acesso</span> 
 																				</a>
@@ -151,34 +161,20 @@
 											<tbody>
 												<tr>
 													<td><a
-														href="http://www.int.unb.br/index.php?option=com_content&amp;view=article&amp;id=47&amp;Itemid=63&amp;lang=br"
-														class="mainlevel">Recursos</a></td>
+														href="#"
+														class="mainlevel">Gêneros</a></td>
 												</tr>
 												<tr>
 													<td><a
-														href="http://www.int.unb.br/index.php?option=com_content&amp;view=article&amp;id=48&amp;Itemid=64&amp;lang=br"
-														class="mainlevel">Seções</a></td>
+														href="#"
+														class="mainlevel">Autores</a></td>
 												</tr>
 												<tr>
 													<td><a
-														href="http://www.int.unb.br/index.php?option=com_content&amp;view=article&amp;id=49&amp;Itemid=65&amp;lang=br"
-														class="mainlevel">Fontes</a></td>
+														href="#"
+														class="mainlevel">Obras</a></td>
 												</tr>
-												<tr>
-													<td><a
-														href="http://www.int.unb.br/index.php?option=com_content&amp;view=article&amp;id=50&amp;Itemid=66&amp;lang=br"
-														class="mainlevel">Atividades</a></td>
-												</tr>
-												<tr>
-													<td><a
-														href="http://www.int.unb.br/index.php?option=com_contact&amp;view=contact&amp;id=1&amp;Itemid=67&amp;lang=br"
-														class="mainlevel">Fale Conosco</a></td>
-												</tr>
-												<tr>
-													<td><a
-														href="http://www.int.unb.br/index.php?option=com_content&amp;view=article&amp;id=112&amp;Itemid=74&amp;lang=br"
-														class="mainlevel">Links</a></td>
-												</tr>
+												
 											</tbody>
 										</table>
 									</div>
