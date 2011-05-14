@@ -791,6 +791,7 @@ margin-top:2px;
 	background: url(../imagens/menu_li.jpg) top right no-repeat;
 }
 
+
 #topnavi ul li a{
 	font-family: Verdana, sans-serif;
 	font-size: 11px;
@@ -866,7 +867,7 @@ font-weight:bolder;
 
 #main {
 	float: left;
-	width: 408px;
+	width: 590px;
 	margin: 0;
 	/*padding: 0 0 0 5px; */	
 	text-align:justify;
@@ -1286,4 +1287,9 @@ table.contentpaneopen td.buttonheading {
     top: 59px;
 	width: 740px;
 	height: 72px;
+}
+
+
+ul.menu li.#acesso {
+	margin: 0 200px 0 0;	
 }
