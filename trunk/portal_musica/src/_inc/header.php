@@ -16,7 +16,12 @@
 			$('document').ready(function(){				
 				$('textarea').cleditor({
 					width: 644,
-					height:421
+					height:421,
+					controls:
+                        "bold italic underline strikethrough subscript superscript | font size " +
+                        "style | color highlight removeformat | bullets numbering | outdent " +
+                        "indent | alignleft center alignright justify | undo redo | " +
+                        "rule link unlink | cut copy paste pastetext | print source"
 				});
 			});
 		</script>

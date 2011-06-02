@@ -46,7 +46,22 @@
 						<td><label for='ititulo'>Título</label></td>
 					</tr>
 					<tr>
-					<td><input type="text" name='titulo' id='ititulo' value= '<?php echo $row ? $row['titulo'] : '';?>' /></td>
+						<td><input type="text" name='titulo' id='ititulo' value= '<?php echo $row ? $row['titulo'] : '';?>' /></td>
+					</tr>
+					<tr>
+						<td>
+							<input type="checkbox" name='pertence' id='ipertence' /><label for='ipertence'>Pertence à Timeline</label>
+						</td>
+					</tr>
+					<tr>
+						<td>	
+							<div id='form_timeline' style='display:none;'>
+								<label for='idata_inicio'>Data de Início</label>
+								<input type='text' id='idata_inicio' name='data_inicio' />
+								<label for='idata_termino'>Data de Término</label>
+								<input type='text' id='idata_termino' name='data_termino'/>
+							</div>
+						</td>
 					</tr>
 					<tr>
 						<td><label for='iartigo'>Artigo</label></td>
@@ -61,14 +76,6 @@
 				</tbody>
 			</table>
 			<div id='cadastro_enviar'><input type="submit" value="Enviar" /></div>
-			
-			<input type="checkbox" name='pertence' id='ipertence' /><label for='ipertence'>Pertence à Timeline</label>
-			<div id='form_timeline' style='display:none;'>
-				<label for='idata_inicio'>Data de Início</label>
-				<input type='text' id='idata_inicio' name='data_inicio' value="<?php echo $row['data_inicio'] ? $row['data_inicio'] : '' ?>" />
-				<label for='idata_termino'>Data de Término</label>
-				<input type='text' id='idata_termino' name='data_termino' value="<?php echo $row['data_termino'] ? $row['data_termino'] : '' ?>"/>
-			</div>
 		</form>
 	</div>
 	
@@ -89,6 +96,7 @@
 					});	   
 			});
 		</script>
+		<iframe src='imagens.php'></iframe>
 		<ul id="anexos"></ul>
 		<iframe src="upload.php" frameborder="0" scrolling="no"></iframe>
 		<form id="upload" action="cadastra_artigo<?php echo $row ? '?'.$row['id'] : '';?>.php" method="post">

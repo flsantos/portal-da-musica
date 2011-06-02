@@ -1,9 +1,7 @@
 @CHARSET "ISO-8859-1";
 div#lista{
 	width: 736px;
-	margin-top: 10px;
-	background: #f4f7d4;
-	border: 1px solid #ffc90c; 
+	margin-top: 10px; 
 	margin-bottom: 10px;
 }
 
