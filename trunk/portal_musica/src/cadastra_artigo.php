@@ -81,27 +81,27 @@
 	
 	<div id='upload'>
 		<div id='imagens'></div>
-		<div id='upload_img'><a>Upload de Imagens</a></div>
+		<div id='upload_img'><a>Inserir Imagem</a></div>
 	</div>
 	
 	<div id='dialog_upload' style='display: none;'>
 		<script>
-			$('document').ready( function(){
-				$('div#remover').click(
-					function(){
-						var arquivo = $(this).parent('li').attr('lang');
-						$.post("arquivo.php", {acao: 'removeAnexo', arquivo: arquivo}, function() {
-					        	$(this).parent('li').remove();
-						});
-					});	   
-			});
+//			$('document').ready( function(){
+//				$('div#remover').click(
+//					function(){
+//						var arquivo = $(this).parent('li').attr('lang');
+//						$.post("arquivo.php", {acao: 'removeAnexo', arquivo: arquivo}, function() {
+//					        	$(this).parent('li').remove();
+//						});
+//					});	   
+//			});
 		</script>
-		<iframe src='imagens.php'></iframe>
-		<ul id="anexos"></ul>
-		<iframe src="upload.php" frameborder="0" scrolling="no"></iframe>
-		<form id="upload" action="cadastra_artigo<?php echo $row ? '?'.$row['id'] : '';?>.php" method="post">
-    		<input type="submit" name="enviar" value="Enviar" />
-		</form>
+		<iframe name="imagens" id='frame_imagens'src='imagens.php' frameborder="0"></iframe>
+<!--		<ul id="anexos"></ul>-->
+<!--		<iframe src="upload.php" frameborder="0" scrolling="no"></iframe>-->
+<!--		<form id="upload" action="cadastra_artigo<?php //echo $row ? '?'.$row['id'] : '';?>.php" method="post">-->
+<!--    		<input type="submit" name="enviar" value="Enviar" />-->
+<!--		</form>-->
 	</div>
 	
 <?php include '_inc/inc_footer.php';?>

@@ -34,6 +34,27 @@ div#upload_img{
 	cursor: pointer;
 }
 
-div#remover{
+div#dialog_upload #frame_imagens{
+	width: 100%;
+	height: 340px;
+}
+table#table_img{
+	text-align: center;
+	margin: 0 auto;
+}
+table#table_img td{
+	width: 161px;
+	height: 161px;
+}
+div#cel_img{
+	width:160px;
+	height:160px;
 	cursor: pointer;
+}
+div#cel_img img{
+	margin: 5px auto;
+}
+.cel_fundo{
+	border: 1px solid green;
+	background: blue;
 }
