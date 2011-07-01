@@ -4,10 +4,29 @@
 	if(!isset($_SESSION['id']))
 		header('Location: administrador.php');
 ?>
+						
 	<script type="text/javascript">
 		$("#acesso").removeClass().addClass("current");
 	</script>
+	
+	<script>
+		 window.onload = function() {
+			var editor = CKEDITOR.replace('iartigo', {
+				language: 'pt',
+				filebrowserBrowseUrl : '/portal_musica/ckfinder/ckfinder.html',
+				filebrowserImageBrowseUrl : '/portal_musica/ckfinder/ckfinder.html?type=Images',
+				filebrowserUploadUrl : '/portal_musica/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+				filebrowserImageUploadUrl : '/portal_musica/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images'
+				
+			});
+		 };
+		
+	</script>
+	
 	<script type='text/javascript'>
+
+
+	
 		$('document').ready(function(){
 			$('input#ipertence').click(function(){
 				if($(this).is(':checked')){
@@ -34,6 +53,10 @@
 		if(isset($_GET['id'])){
 			$query = mysql_query('select * from artigo where id="'.$_GET['id'].'"');
 			$row = mysql_fetch_array($query);
+			
+			if ($row) {
+				echo "<script>$('div#form_timeline').fadeIn();</script>";
+			}
 		}
 	?>
 	<div id='lista'>
@@ -50,16 +73,16 @@
 					</tr>
 					<tr>
 						<td>
-							<input type="checkbox" name='pertence' id='ipertence' /><label for='ipertence'>Pertence à Timeline</label>
+							<input type="checkbox" selected="true"  name='pertence' id='ipertence' <?php echo $row ? 'checked' : '';?> /><label for='ipertence'>Pertence à Timeline</label>
 						</td>
 					</tr>
 					<tr>
 						<td>	
 							<div id='form_timeline' style='display:none;'>
 								<label for='idata_inicio'>Data de Início</label>
-								<input type='text' id='idata_inicio' name='data_inicio' />
+								<input type='text' id='idata_inicio' name='data_inicio' value='<?php echo $row ? substr($row['data_inicio'],0,4) : '';?>' />
 								<label for='idata_termino'>Data de Término</label>
-								<input type='text' id='idata_termino' name='data_termino'/>
+								<input type='text' id='idata_termino' name='data_termino' value='<?php echo $row ? substr($row['data_termino'],0,4) : '';?>' />
 							</div>
 						</td>
 					</tr>
@@ -69,7 +92,7 @@
 					<tr>
 						<td colspan='2'>
 							<textarea name='artigo' id='iartigo' >
-								<?php echo $row ? $row['artigo'] : '';?>						
+								<?php echo $row ? stripcslashes($row['artigo']) : '';?>						
 							</textarea>
 						</td>
 					</tr>
@@ -80,8 +103,9 @@
 	</div>
 	
 	<div id='upload'>
-		<div id='imagens'></div>
-		<div id='upload_img'><a>Inserir Imagem</a></div>
+		<!-- <div id='imagens'></div> -->
+		<!-- <div id='upload_img'><a>Inserir Imagem</a></div> -->
+		
 	</div>
 	
 	<div id='dialog_upload' style='display: none;'>

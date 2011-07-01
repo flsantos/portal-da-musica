@@ -174,6 +174,11 @@
 														href="#"
 														class="mainlevel">Obras</a></td>
 												</tr>
+												<tr>
+													<td><a
+														href="listar_artigos.php"
+														class="mainlevel">Todos os artigos</a></td>
+												</tr>
 												
 											</tbody>
 										</table>
