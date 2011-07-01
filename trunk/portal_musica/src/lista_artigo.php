@@ -15,7 +15,7 @@
 						$( "#exclusao" ).dialog({
 							resizable: false,
 							draggable: false,
-							height:140,
+							height:180,
 							modal: true,
 							buttons: {
 								"Excluir": function() {
@@ -50,7 +50,7 @@
 	$result = mysql_query($query, $conexao);
 	
 ?>
-	<div id='exclusao' style='display:none;'title='Deseja excluir este artigo?'>Deseja excluir este artigo?</div>
+	<div id='exclusao' style='display:none;'title='Portal da Música'>Deseja excluir este artigo?</div>
 	<div id='lista'>
 		<h2>Lista de Artigos</h2>
 		<table id='lista_artigos'>
@@ -65,13 +65,13 @@
 				<?php while($row = mysql_fetch_object($result)): ?>			
 					<tr id='<?php echo $row->id?>'>
 						<td><?php echo $row->titulo; ?></td>
-						<td><a href='javascript:;' caminho='cadastra_artigo.php?id=<?php echo $row->id; ?>'>Editar</a></td>
+						<td><a href='cadastra_artigo.php?id=<?php echo $row->id; ?>'>Editar</a></td>
 						<td><a id='excluir' href='javascript:;' caminho='<?php echo $row->id; ?>'>Excluir</a></td>
 					</tr>
 					<?php $row++; ?>
 				<?php endwhile; ?>
 			</tbody>
 		</table>
-		<a href="javascript:;" caminho='cadastra_artigo.php'>Novo Artigo</a>
+		<a href='cadastra_artigo.php'>Novo Artigo</a>
 	</div>
 <?php include '_inc/inc_footer.php';?>
