@@ -78,10 +78,10 @@
 					</tr>
 					<tr>
 						<td>	
-							<div id='form_timeline' style='display:none;'>
-								<label for='idata_inicio'>Data de Início</label>
+							<div id='form_timeline' style='display:<?php echo $row ? 'inline' : 'none';?>;'>
+								<label for='idata_inicio'>Data de Início (Ano)</label>
 								<input type='text' id='idata_inicio' name='data_inicio' value='<?php echo $row ? substr($row['data_inicio'],0,4) : '';?>' />
-								<label for='idata_termino'>Data de Término</label>
+								<label for='idata_termino'>Data de Término (Ano)</label>
 								<input type='text' id='idata_termino' name='data_termino' value='<?php echo $row ? substr($row['data_termino'],0,4) : '';?>' />
 							</div>
 						</td>
